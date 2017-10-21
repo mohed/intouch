@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/java/mvn'
-  args: ['mvn install']
+  args: ['clean install']
 images: ['eu.gcr.io/intouch-me/intouch']
 tags:
 - "lts"
