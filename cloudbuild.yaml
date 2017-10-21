@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/java/mvn'
   args: ['install']
-images: ['eu.gcr.io/intouch-me/intouch']
-tags:
-- "lts"
+- name: gcr.io/cloud-builders/docker
+  args: ['build', '-t', 'eu.gcr.io/$PROJECT_ID/intouch', '.']
+images: ['eu.gcr.io/$PROJECT_ID/myimage']
